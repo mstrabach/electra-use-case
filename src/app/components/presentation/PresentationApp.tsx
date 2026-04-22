@@ -8,51 +8,51 @@ import { ChargingState } from '../charging/types';
 
 const DEMO_STATES: { name: string; state: ChargingState }[] = [
   {
-    name: '04-Plateau nominal',
+    name: 'Plateau nominal',
     state: { phase: '04-plateau', modulator: 'nominal', incident: null, timeElapsed: 25, cost: 2.95, battery: 30, power: 180 },
   },
   {
-    name: '04-Plateau cold',
+    name: 'Plateau cold',
     state: { phase: '04-plateau', modulator: 'cold', incident: null, timeElapsed: 32, cost: 3.80, battery: 28, power: 85 },
   },
   {
-    name: '04-Plateau hot',
+    name: 'Plateau hot',
     state: { phase: '04-plateau', modulator: 'hot', incident: null, timeElapsed: 28, cost: 3.20, battery: 32, power: 95 },
   },
   {
-    name: '04-Plateau unknown reason',
+    name: 'Plateau unknown reason',
     state: { phase: '04-plateau', modulator: 'unknown', incident: null, timeElapsed: 22, cost: 2.65, battery: 26, power: 75 },
   },
   {
-    name: '03-Ramp up nominal',
+    name: 'Ramp up nominal',
     state: { phase: '03-rampup', modulator: 'nominal', incident: null, timeElapsed: 8, cost: 0.95, battery: 22, power: 150 },
   },
   {
-    name: '03-Ramp up cold',
+    name: 'Ramp up cold',
     state: { phase: '03-rampup', modulator: 'cold', incident: null, timeElapsed: 10, cost: 1.20, battery: 20, power: 65 },
   },
   {
-    name: '05-Tapering nominal',
+    name: 'Tapering nominal',
     state: { phase: '05-tapering', modulator: 'tapering-soc', incident: null, timeElapsed: 48, cost: 8.45, battery: 87, power: 62 },
   },
   {
-    name: '05-Tapering cold',
+    name: 'Tapering cold',
     state: { phase: '05-tapering', modulator: 'cold', incident: null, timeElapsed: 52, cost: 9.10, battery: 85, power: 45 },
   },
   {
-    name: '06-Complete',
+    name: 'Complete',
     state: { phase: '06-complete', modulator: 'nominal', incident: null, timeElapsed: 52, cost: 9.80, battery: 100, power: 0 },
   },
   {
-    name: 'I7-Autocharge off',
+    name: 'Autocharge off',
     state: { phase: '01-plugged', modulator: 'nominal', incident: 'i7-autocharge-off', timeElapsed: 0, cost: 0, battery: 18, power: 0 },
   },
   {
-    name: 'I2-Payment issue',
+    name: 'Payment issue',
     state: { phase: '04-plateau', modulator: 'nominal', incident: 'i2-payment', timeElapsed: 15, cost: 1.85, battery: 18, power: 0 },
   },
   {
-    name: 'I5-Overheating',
+    name: 'Overheating',
     state: { phase: '04-plateau', modulator: 'nominal', incident: 'i5-overheating', timeElapsed: 18, cost: 2.10, battery: 22, power: 0 },
   },
 ];
