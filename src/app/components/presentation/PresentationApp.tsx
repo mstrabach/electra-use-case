@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import electraLogo from '../../../imports/electra.png';
-import ecranImg from '../../../imports/ecran.png';
+import ecranImg from '../../../imports/charging-screen.png';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ChargingScreen from '../charging/ChargingScreen';
 import NotificationsPreview from '../charging/NotificationsPreview';
