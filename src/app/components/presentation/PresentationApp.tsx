@@ -214,10 +214,10 @@ export default function PresentationApp() {
     // Slide 5: Matrix concept
     {
       id: 'matrix',
-      bg: 'bg-[#0b2936]',
+      bg: 'bg-[#E7FFFC]',
       content: (
         <div className="flex flex-col items-center justify-center h-full w-full px-16 py-16 text-white">
-          <h2 className="text-6xl font-light mb-12">Concept explorations</h2>
+          <h2 className="text-6xl font-light mb-12 text-[#0b2936]">Concept explorations</h2>
           <div className="flex-1 flex items-center justify-center w-full">
             <img 
               src={electraLogo} 
