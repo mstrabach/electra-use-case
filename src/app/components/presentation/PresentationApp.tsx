@@ -235,8 +235,11 @@ export default function PresentationApp() {
       id: 'final-choice',
       bg: 'bg-[#0b2936]',
       content: (
-        <div className="h-full w-full flex items-center justify-center" style={{ padding: '28px' }}>
-          <img src={ecranImg} alt="Final choice" style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }} />
+        <div className="flex flex-col h-full w-full px-16 py-10">
+          <h2 className="text-4xl font-light text-white mb-6">Final choice</h2>
+          <div className="flex-1 flex items-center justify-center min-h-0">
+            <img src={ecranImg} alt="Final choice" className="max-h-full max-w-full object-contain" />
+          </div>
         </div>
       ),
     },
