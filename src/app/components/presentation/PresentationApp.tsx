@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import electraLogo from '../../../imports/electra.png';
+import ecranImg from '../../../imports/ecran.png';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ChargingScreen from '../charging/ChargingScreen';
 import NotificationsPreview from '../charging/NotificationsPreview';
@@ -232,72 +233,12 @@ export default function PresentationApp() {
     // Slide 6: Final choice
     {
       id: 'final-choice',
-      bg: 'bg-[#edece8]',
+      bg: 'bg-[#0b2936]',
       content: (
-        <div className="relative h-full w-full" style={{ padding: '40px 60px 40px 60px' }}>
-          <h2 className="text-4xl font-light text-[#0b2936] mb-4">Final choice</h2>
-
-          <div className="relative" style={{ height: 'calc(100% - 72px)' }}>
-            {/* Phone mockup */}
-            <div style={{
-              position: 'absolute',
-              left: 0,
-              top: '50%',
-              transform: 'translateY(-50%)',
-              width: '206px',
-              height: '447px',
-              overflow: 'hidden',
-              borderRadius: '24px',
-              boxShadow: '0 24px 60px rgba(0,0,0,0.18)',
-            }}>
-              <div style={{ transform: 'scale(0.55)', transformOrigin: 'top left', width: '375px', height: '812px' }}>
-                <ChargingScreen state={{ phase: '04-plateau', modulator: 'nominal', incident: null, timeElapsed: 25, cost: 2.95, battery: 30, power: 180 }} />
-              </div>
-            </div>
-
-            {/* SVG annotation lines */}
-            <svg style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', overflow: 'visible' }}>
-              {/* Headline → One single sentence */}
-              <line x1="19%" y1="34%" x2="33%" y2="34%" stroke="#0b2936" strokeWidth="1" />
-              <circle cx="19%" cy="34%" r="2.5" fill="#0b2936" />
-              {/* Cards → Main metrics easy to read */}
-              <line x1="19%" y1="52%" x2="33%" y2="52%" stroke="#0b2936" strokeWidth="1" />
-              <circle cx="19%" cy="52%" r="2.5" fill="#0b2936" />
-              {/* Battery bar */}
-              <line x1="19%" y1="63%" x2="29%" y2="63%" stroke="#0b2936" strokeWidth="1" />
-              <circle cx="19%" cy="63%" r="2.5" fill="#0b2936" />
-              {/* Power bar */}
-              <line x1="19%" y1="69%" x2="29%" y2="69%" stroke="#0b2936" strokeWidth="1" />
-              <circle cx="19%" cy="69%" r="2.5" fill="#0b2936" />
-              {/* Bracket vertical + to annotation */}
-              <line x1="29%" y1="63%" x2="29%" y2="69%" stroke="#0b2936" strokeWidth="1" />
-              <line x1="29%" y1="66%" x2="33%" y2="66%" stroke="#0b2936" strokeWidth="1" />
-              {/* CTA → Dynamic CTA */}
-              <line x1="19%" y1="79%" x2="33%" y2="79%" stroke="#0b2936" strokeWidth="1" />
-              <circle cx="19%" cy="79%" r="2.5" fill="#0b2936" />
-            </svg>
-
-            {/* Annotation labels */}
-            <div style={{ position: 'absolute', left: '35%', top: 'calc(34% - 56px)', maxWidth: '58%' }}>
-              <p style={{ fontWeight: 600, color: '#0b2936', fontSize: '13px', marginBottom: '5px' }}>One single sentence to :</p>
-              <ul style={{ color: '#0b2936', fontSize: '13px', paddingLeft: '16px', lineHeight: 1.7, margin: 0 }}>
-                <li>bring simple information to the user : is everything ok ? if not, why ?</li>
-                <li>teach concepts</li>
-                <li>push features (e.g. autocharge)</li>
-              </ul>
-            </div>
-
-            <div style={{ position: 'absolute', left: '35%', top: 'calc(52% - 10px)' }}>
-              <p style={{ color: '#0b2936', fontSize: '13px', margin: 0 }}>Main metrics easy to <strong>read</strong></p>
-            </div>
-
-            <div style={{ position: 'absolute', left: '35%', top: 'calc(66% - 10px)' }}>
-              <p style={{ color: '#0b2936', fontSize: '13px', margin: 0 }}>Metrics easy to <strong>feel</strong></p>
-            </div>
-
-            <div style={{ position: 'absolute', left: '35%', top: 'calc(79% - 10px)' }}>
-              <p style={{ color: '#0b2936', fontSize: '13px', margin: 0 }}>Dynamic <strong>CTA</strong></p>
-            </div>
+        <div className="flex flex-col h-full w-full px-16 py-10">
+          <h2 className="text-4xl font-light text-white mb-6">Final choice</h2>
+          <div className="flex-1 flex items-center justify-center min-h-0">
+            <img src={ecranImg} alt="Final choice" className="max-h-full max-w-full object-contain" />
           </div>
         </div>
       ),
