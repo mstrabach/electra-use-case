@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install *)",
+      "Bash(pnpm approve-builds *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(pnpm dev *)",
+      "Bash(gh auth *)"
+    ]
+  }
+}
