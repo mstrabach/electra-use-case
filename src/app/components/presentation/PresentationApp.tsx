@@ -259,7 +259,25 @@ export default function PresentationApp() {
                 <p className="text-lg opacity-60 mb-4">Platform: iOS · Interactive demo</p>
                 <div className="bg-[#43f5ba]/10 rounded-xl p-4 border-l-4 border-[#43f5ba]">
                   <p className="font-medium text-lg mb-2">Current state:</p>
-                  <p className="text-2xl text-[#43f5ba]">{DEMO_STATES[selectedStateIndex].name}</p>
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-2xl text-[#43f5ba]">{DEMO_STATES[selectedStateIndex].name}</p>
+                    <div className="flex gap-2 shrink-0">
+                      <button
+                        onClick={prevState}
+                        disabled={selectedStateIndex === 0}
+                        className="p-2 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
+                      >
+                        <ChevronLeft className="w-4 h-4 text-white" />
+                      </button>
+                      <button
+                        onClick={nextState}
+                        disabled={selectedStateIndex === DEMO_STATES.length - 1}
+                        className="p-2 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
+                      >
+                        <ChevronRight className="w-4 h-4 text-white" />
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -283,7 +301,7 @@ export default function PresentationApp() {
               </div>
 
               <div className="text-xs opacity-60">
-                <p>Use the grid above or arrows to explore all 12 key states</p>
+                <p>Use the grid above to explore all 12 key states</p>
               </div>
             </div>
 
@@ -292,23 +310,6 @@ export default function PresentationApp() {
             </div>
           </div>
 
-          {/* State navigation arrows */}
-          <div className="absolute bottom-24 right-16 flex gap-3">
-            <button
-              onClick={prevState}
-              disabled={selectedStateIndex === 0}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
-            >
-              <ChevronLeft className="w-5 h-5 text-white" />
-            </button>
-            <button
-              onClick={nextState}
-              disabled={selectedStateIndex === DEMO_STATES.length - 1}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer transition-all"
-            >
-              <ChevronRight className="w-5 h-5 text-white" />
-            </button>
-          </div>
         </div>
       ),
     },
@@ -407,9 +408,7 @@ export default function PresentationApp() {
       </div>
 
       {/* Navigation */}
-      <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 backdrop-blur-md rounded-full px-6 py-3 ${
-        isLightBg ? 'bg-[#0b2936]/90' : 'bg-white/10'
-      }`}>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 backdrop-blur-md rounded-full px-6 py-3 bg-[#0b2936]/80">
         <button
           onClick={prevSlide}
           disabled={currentSlide === 0}
