@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import electraLogo from '../../../imports/electra.png';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ChargingScreen from '../charging/ChargingScreen';
 import NotificationsPreview from '../charging/NotificationsPreview';
@@ -219,7 +220,7 @@ export default function PresentationApp() {
           <h2 className="text-6xl font-light mb-12">Concept explorations</h2>
           <div className="flex-1 flex items-center justify-center w-full">
             <img 
-              src="/src/imports/electra.png" 
+              src={electraLogo} 
               alt="Concept explorations" 
               className="max-h-full max-w-full object-contain"
             />
