@@ -401,7 +401,8 @@ export default function PresentationApp() {
   const isLightBg = current.bg.includes('bg-white');
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="w-full h-screen flex items-center justify-center bg-[#0b2936]">
+      <div className="relative w-full h-full max-w-[1440px] overflow-hidden">
       {/* Current slide */}
       <div className={`w-full h-full ${current.bg}`}>
         {current.content}
@@ -452,6 +453,7 @@ export default function PresentationApp() {
       }`}>
         {currentSlide + 1} / {slides.length}
       </div>
+    </div>
     </div>
   );
 }
